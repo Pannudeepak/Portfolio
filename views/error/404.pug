@@ -1,0 +1,10 @@
+extends layout 
+
+block variables
+    - let title = "404"
+
+block main-content 
+    div.text-center.m-3.p-3
+        h1.text-white Oops!
+        h3.text-white Error 404 on #{url}
+        h5.text-white #{message}
