@@ -1,0 +1,18 @@
+{
+  "name": "folio",
+  "version": "1.0.0",
+  "description": "My personal Projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Deepak Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "node": "^20.5.0",
+    "node-fetch": "^3.3.2",
+    "pug": "^3.0.2"
+  }
+}

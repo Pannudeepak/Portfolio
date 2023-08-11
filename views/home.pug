@@ -1,27 +1,76 @@
-block variables
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous")
-    title #{title} | Deepak Pannu
-  body.bg-dark
-    div.container-fluid
-        div.row
-            div.col    
-                h1.text-white.text-center.mt-5.pt-5.display-1 Deepak Pannu
-    br 
-    div.text-white.text-center.mt-5
-        p.pt-5 A recent computer science graduate. Looking for a web developer role to start a career.
-    block main-content
+extends layout
+block main-content
+  body
+    div#main-container.bg-dark
+      div#personal-grid-conatiner.white
+        div.personal-grid-item.photo
+          img(src="/myPhoto.jpg" alt="My Photo")
+        div.personal-grid-item
+          div.description
+            p Step into the world of web development with me, a curious and creative soul. As you explore this personal website, you'll uncover the magic behind my coding adventures. I believe that each line of code is an opportunity to create something extraordinary.
+            a(href="#contact") 
+              button(type="button") Get In Touch
+    div#big-container
+      div#small-container
+        h1.portfolio-heading#portfolio Portfolio 
+        p.portfolio-para Exploring My Journey: A Collection of Personal Projects, Group Collaborations, and University Deliverables.
+        div.grid-container 
+          div.grid-item 
+            div.content-front 
+              a(href="") 
+                img(src="/cSupport.jpg" alt="Customer Support")
+          div.grid-item
+            div.content-front 
+              a(href="") 
+                img(src="/cSupport.jpg" alt="Customer Support")
+          div.grid-item
+            div.content-front 
+              a(href="") 
+                img(src="/cSupport.jpg" alt="Customer Support")
+          div.grid-item
+            div.content-front 
+              a(href="") 
+                img(src="/cSupport.jpg" alt="Customer Support")
+          div.grid-item
+            div.content-front
+              a(href="")  
+                img(src="/cSupport.jpg" alt="Customer Support")
+          div.grid-item
+            div.content-front 
+              a(href="") 
+                img(src="/cSupport.jpg" alt="Customer Support")
+        div#education 
+          h1.portfolio-heading Education 
+          p.portfolio-para.education-decription With my degree I built a foundation of programming and designing skills, <br>  enabling me to excel in researching new topics and completing projects with precision. 
+          p.portfolio-para.degree BSc Applied Computer Science, University of Winnipeg
+          h1.degree-date 2020-2023
+          p.portfolio-para.education-decription.degree-description Bachelor of Applied Computer Science is an immersive and practice-oriented undergraduate degree program designed to equip students with a deep understanding of computer science concepts and empower them with real-world problem-solving skills.
+          p.portfolio-para.education-decription.degree-description Bachelor of Applied Computer Science is an immersive and practice-oriented undergraduate degree program designed to equip students with a deep understanding of computer science concepts and empower them with real-world problem-solving skills.
+    div#contact 
+      h1.portfolio-heading Let's Get In Touch 
+      p.contact-para Reach out to me to set up a call about working together on your upcoming<br> project, or just to make a connection.
+      form.form-container(action="/submit" method="POST")
+        .form-group
+          .form-row
+            label(for="name") Name:
+            input(type="text" id="name" name="name" required)
+            label(for="email") Email:
+            input(type="email" id="email" name="email" required)
 
-  script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous")
+        .form-group
+          .form-row
+            label(for="subject") Subject:
+            input(type="text" id="subject" name="subject" required)
+            label(for="subject") Subject:
+            input(type="text" id="subject" name="subject" required)
 
+        .form-group
+          .form-row  
+            label(for="message") Your Message:
+            textarea#message(name="message" placeholder="Enter your message here...", required)
 
-
-
-
+        .form-group.centered-btn
+          button(type="submit") Submit
 
 
 
