@@ -9,10 +9,13 @@
   "author": "Deepak Singh",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "googleapis": "^126.0.0",
     "node": "^20.5.0",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.4",
     "pug": "^3.0.2"
   }
 }
