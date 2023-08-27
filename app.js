@@ -1,6 +1,5 @@
 const express = require("express");
 const session = require("express-session");
-//const fetch = require('node-fetch');
 const path = require("path");
 const router = express.Router();
 const app = express();
@@ -9,7 +8,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "pug");
-
 app.use(
   session({
     saveUninitialized: true,
@@ -25,6 +23,9 @@ app.use(
 
 app.get("/", (req, res) => {
   res.render("home");
+});
+app.post("/send-email", (req, res) => {
+  res.redirect("/");
 });
 
 app.get("*", function (req, res) {
