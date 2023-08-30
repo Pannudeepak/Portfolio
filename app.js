@@ -8,18 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "pug");
-app.use(
-  session({
-    saveUninitialized: true,
-    secret: "deepak",
-    resave: true,
-    saveUninitialized: false,
-    cookie: {
-      path: "/",
-      maxAge: 3600000,
-    },
-  })
-);
+
 
 app.get("/", (req, res) => {
   res.render("home");
