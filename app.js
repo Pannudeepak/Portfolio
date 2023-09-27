@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 app.post("/send-email", (req, res) => {
-  res.redirect("/");
+  res.render("home");
 });
 
 app.get("*", function (req, res) {
