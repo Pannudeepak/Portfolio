@@ -1,14 +1,10 @@
 const express = require("express");
-const session = require("express-session");
-const path = require("path");
-const router = express.Router();
 const app = express();
 const port = process.env.PORT || 80;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "pug");
-
 
 app.get("/", (req, res) => {
   res.render("home");
